@@ -1,0 +1,58 @@
+.team {
+  background-color: $color-light-gray;
+
+  &__pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__info {
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  &__figure {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $color-white;
+    margin: 0;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &__position {
+    font-size: 16px;
+    color: $color-gray;
+  }
+
+  &__social-icons {
+    margin-top: 16px;
+    padding: 0 32px;
+  }
+
+  &__social-icon {
+    color: $icons-inactive;
+  }
+
+  &__social-svg {
+    fill: $icons-inactive;
+    transition: fill $transition-set;
+  }
+
+  &__social-icon:is(:hover, :focus) > &__social-svg {
+    fill: $color-white;
+  }
+}

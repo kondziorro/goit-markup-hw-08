@@ -1,0 +1,118 @@
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.menu-container {
+    background: $color-white;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(100%);
+    transition: transform 250ms ease;
+
+    &__box-item {
+        display: flex;
+    }
+
+    &__box {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.menu-toggle {
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+
+    &__close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+
+    &:hover,
+    &:focus {
+        fill: $color-blue;
+        cursor: pointer;
+    }
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: absolute;
+    top: 48px;
+    left: 40px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 47px;
+    text-align: left;
+    letter-spacing: 0.02;
+
+    &__list-item {
+        text-decoration: none;
+        color: $color-light-black;
+
+        &--active {
+            color: $color-blue;
+        }
+
+        &--border {
+            padding-right: 10px;
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+        }
+    }
+
+    &__tel-item {
+        position: absolute;
+        bottom: 194px;
+        left: 40px;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 40px;
+        text-align: left;
+        letter-spacing: 0.02;
+        color: $color-blue;
+    }
+
+    &__mail-item {
+        position: absolute;
+        bottom: 134px;
+        left: 40px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: left;
+        letter-spacing: 0.02;
+        color: $color-gray;
+    }
+
+    &__social-item {
+        position: absolute;
+        bottom: 48px;
+        left: 40px;
+        display: flex;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
+        letter-spacing: 0.02;
+        color: $color-blue;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-container {
+        display: none;
+    }
+}
+

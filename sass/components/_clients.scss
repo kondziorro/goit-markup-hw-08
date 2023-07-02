@@ -1,0 +1,35 @@
+.clients {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__icon {
+    display: block;
+    border: 1px solid $icons-inactive;
+    border-radius: $border-radius;
+    color: $icons-inactive;
+    transition: border $transition-set;
+  }
+
+  &__icon:is(:hover, :focus) {
+    border: 1px solid $color-blue;
+  }
+
+  &__icon-svg {
+    fill: $icons-inactive;
+    transition: fill $transition-set;
+  }
+
+  &__icon:is(:hover, :focus) > &__icon-svg {
+    fill: $color-blue;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    flex-wrap: nowrap;
+  }
+}

@@ -1,0 +1,59 @@
+.newsletter-signup-form {
+  padding-top: 12px;
+}
+
+.newsletter {
+  margin-bottom: 20px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $color-white;
+  font-size: 14px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__input {
+    padding: 15px;
+    width: 358px;
+    height: 50px;
+    color: $color-white;
+    background-color: $bg-color-gray;
+    border: 1px solid #ffffff4d;
+    border-radius: $border-radius;
+  }
+
+  &__input::placeholder {
+    font-size: 16px;
+    color: $white-transparent;
+  }
+
+  &__button {
+    padding: 10px 28px 10px 42px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: $color-white;
+    background-color: $color-blue;
+    border: none;
+    border-radius: $border-radius;
+    box-shadow: $button-box-shadow;
+    cursor: pointer;
+  }
+
+  &__send-icon {
+    margin-left: 24px;
+    vertical-align: middle;
+  }
+}

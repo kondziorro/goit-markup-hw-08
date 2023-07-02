@@ -1,0 +1,116 @@
+.header {
+  border-bottom: 1px solid #ececec;
+  padding: 10px 0;
+
+  @include tablet {
+  padding: 21px 0;
+  }
+
+  @include desktop {
+    padding: 24px 0 25px;
+  }
+
+  &__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+}
+
+
+.nav {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    margin-left: 83px;
+    margin-right: auto;
+  }
+
+  @include desktop {
+    margin-left: 93px;
+  }
+
+  color: $color-light-black;
+  align-items: center;
+  margin-right: auto;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    gap: 46px;
+    justify-content: center;
+    align-items: center;
+    color: $color-light-black;
+    font-size: 14px;
+    line-height: 1.14;
+    list-style: none;
+  }
+
+  &__link {
+    position: relative;
+    color: $color-light-black;
+    transition: color $transition-set;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+
+  &__link:is(:hover, :focus) {
+    color: $color-blue;
+  }
+
+  &__link--active {
+    color: $color-blue;
+  }
+
+  &__link--active::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    left: 0;
+    margin-top: 45px;
+    position: absolute;
+    border-bottom: solid 4px $color-blue;
+    border-radius: 2px;
+  }
+}
+
+.contact {
+  display: none;
+  color: $color-gray;
+
+  @include tablet {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  }
+
+  @include desktop {
+  flex-direction: row;
+  gap: 30px;
+  }
+
+  &__item:is(:hover, :focus) {
+    color: $color-blue;
+    transition: color $transition-set;
+  }
+
+  &__item {
+    text-emphasis: none;
+    text-decoration: none;
+    color: $color-gray;
+    fill: currentColor;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.17;
+    text-decoration: none;
+  }
+
+  &__icon {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
